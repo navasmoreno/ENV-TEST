@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  NOMBRE: string = "";
+  constructor(){
+
+  }
+  ngOnInit():void
+  {
+    this.NOMBRE = process.env["NOMBRE"] ?? "";
+  }
 }
